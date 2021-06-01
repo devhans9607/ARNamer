@@ -2,3 +2,11 @@
 /.gradle/
 /build/
 /build/classes/java/main/
+/.idea/.gitignore
+/.idea/modules/ARNamer.iml
+/.idea/compiler.xml
+/.idea/gradle.xml
+/.idea/jarRepositories.xml
+/.idea/libraries-with-intellij-classes.xml
+/.idea/misc.xml
+/.idea/vcs.xml
