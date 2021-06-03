@@ -67,7 +67,9 @@ public class ARNamer {
         String[] splits = oldName.split(DOT_HYPHEN_REGEX);
         int finalIndex = splits.length - 1;
 
-        if (finalIndex < 9 || !splits[finalIndex].equals(FORMAT) || Pattern.matches(DATE_REGEX, Arrays.asList(splits).subList(finalIndex - 6, finalIndex).toString()))
+        if (finalIndex < 9
+                || !splits[finalIndex].equals(FORMAT)
+                || !Pattern.matches(DATE_REGEX, String.join("", Arrays.asList(splits).subList(finalIndex - 6, finalIndex))))
             return null;
 
         Collections.rotate(Arrays.asList(splits).subList(0, finalIndex), 6);
